@@ -13,7 +13,16 @@ return new class extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
+            $table->string('content');
+            $table->string('is_admin_message');
+            $table->string('is_read');
+            $table->unsignedBigInteger('role_id'); // Relacion con la tabla roles
             $table->timestamps();
+
+            $table->foreign('role_id')
+            ->references('role_id')
+            ->on('roles')
+            ->onDelete('cascade');
         });
     }
 
