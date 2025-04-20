@@ -15,6 +15,6 @@ class UserController extends Controller
         $usur->email=$request->email;
         $usur->password=$request->password;
         $usur->save();
-        return$usur;
+        return $usur;
     }
 }

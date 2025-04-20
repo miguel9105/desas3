@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="{{route('User.enviarUsuario')}}" method="post" enctype="multipart/form-data">
+    <form action="{{route('User.enviarUsuario')}} " method="post" enctype="multipart/form-data">
         @csrf   
         <label for="">
             ingresa tu nombre
