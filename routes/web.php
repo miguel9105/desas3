@@ -15,4 +15,12 @@ Route::controller(UserController::class)->group(function(){
 Route::controller(PublicationController::class)->group(function ()  {
     Route::get('/publicacion','vista_publi');
     Route::post('/publicacion/respuesta','respuesta_publi')->name('Publication.respuesta_publi');
+ 
+  
+ 
+use App\Models\Message;
+Route::controller(MessageController::class)->group(function ()  {
+    Route::get('vistamensaje','enviar');
+    Route::post('vistamensaje','store')->name('Message.store');
+
 });
