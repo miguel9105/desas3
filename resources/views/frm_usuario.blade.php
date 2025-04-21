@@ -14,7 +14,16 @@
             <br>
             <input type="text" name="name">
         </label>
-        
+        <label for="">
+            ingresa tu correo
+            <br>
+            <input type="text" name="email">
+        </label><label for="">
+            ingresa tu contraseña
+            <br>
+            <input type="text" name="password">
+        </label>
+        <button type="submit"><Enviar/button>
     </form>
 </body>
 </html>
