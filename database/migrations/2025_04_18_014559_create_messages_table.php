@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->text('content'); // Para el contenido del mensaje
+            $table->boolean('is_admin_message')->default(false); // Para indicar si es un mensaje de administrador
+            $table->boolean('is_read')->default(false); // Para indicar si el mensaje ha sido leído
+            $table->foreignId('role_id')->constrained()->onDelete('cascade'); // Relación con la tabla 'roles'
+            $table->timestamps(); // Tiempos de creación y actualización
         });
     }
 
