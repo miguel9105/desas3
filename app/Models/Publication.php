@@ -6,5 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Publication extends Model
 {
+    
     //
+    public function role() {
+        return $this->belongsTo('App\Models\role');
+    }
+
+    public function category() {
+        return $this->belongsToMany('App\Models\Category');
+    }
 }
