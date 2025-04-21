@@ -13,17 +13,21 @@
             ingresa tu nombre
             <br>
             <input type="text" name="name">
+            <br>
         </label>
         <label for="">
             ingresa tu correo
             <br>
             <input type="text" name="email">
+            <br>
         </label><label for="">
             ingresa tu contraseña
             <br>
             <input type="text" name="password">
+            <br>
         </label>
-        <button type="submit"><Enviar/button>
+        <br>
+        <button type="submit">Enviar</button>
     </form>
 </body>
 </html>
