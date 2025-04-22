@@ -13,6 +13,16 @@ return new class extends Migration
     {
         Schema::create('publications', function (Blueprint $table) {
             $table->id();
+
+        $table->string('description_publication');
+        $table->string('url_imagen');
+        $table->string('title_publication');
+        $table->date('date_publication');
+        $table->string('type_publication');
+        $table->string('zone_publication');
+        $table->foreignId('role_id')->constrained(); // Esta línea sigue la convención
+        $table->timestamps();
+
             $table->string('title');
             $table->string('description');
             $table->string('url_img');
@@ -21,6 +31,7 @@ return new class extends Migration
             $table->unsignedBigInteger('role_id')->nullable();
             $table->foreign('role_id')->references('id')->on('roles');
             $table->timestamps();
+
         });
     }
 
