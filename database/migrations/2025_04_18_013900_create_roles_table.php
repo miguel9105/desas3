@@ -12,15 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('roles', function (Blueprint $table) {
-            $table->id();  // Genera un ID automáticamente como clave primaria
+            $table->id();
             $table->string('role_name'); // Nombre del rol
-            $table->boolean('administrators')->default(false); // Administradores
-            $table->boolean('community')->default(false); // Comunidad
-            $table->boolean('zone_community')->default(false); // Zona de comunidad
-            $table->boolean('mail_administrator')->default(false); // Administrador de correo
-            $table->timestamps(); // Campos created_at y updated_at
+            $table->string('administrators'); // Cambiado a string
+            $table->string('community'); // Cambiado a string
+            $table->string('zone_community'); // Cambiado a string
+            $table->string('mail_administrator'); // Cambiado a string (sería mejor email si es un correo)
+            $table->timestamps();
         });
     }
+    
 
     /**
      * Reverse the migrations.
