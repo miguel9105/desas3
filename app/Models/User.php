@@ -45,8 +45,18 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
     public function roles()
 {
     return $this->belongsToMany(Role::class, 'role_user');
 }
+
+
+    //relacion uno a muchos a role
+    public function roles(){
+        return $this->belongsToMany('App\Models\Role');
+    }
+
+
 }
+
