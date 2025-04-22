@@ -11,26 +11,37 @@
     @csrf
     <label for="">
         titulo
+        <br>
         <input type="text" name="title">
+        <br>    
     </label>
     
     <label for="">
         desccription
+        <br>
         <input type="text" name="description">
+        <br>
     </label>
 
     <label for="">
         description
+        <br>
         <input type="text" name="url_img">
+        <br>
     </label>
     <label for="">
         fecha publicacion
+        <br>
         <input type="date" name="date_publication">
+        <br>
     </label>
     <label for="">
         ubicacion
+        <br>
         <input type="text" name="ubication">
+        <br>
     </label>
+    <br>
     <button>enviar</button>
     </form>
 </body>
