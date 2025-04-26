@@ -35,6 +35,9 @@ Route::controller(RoleController::class)->group(function ()  {
     Route::get('/roles/create','create')->name('roles.create');
     Route::post('/roles','store')->name('roles.store');
 });
+Route::get('/vite', function () {
+    return view('index');
+});
 
 
 
