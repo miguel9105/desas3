@@ -29,6 +29,10 @@ class OrmController extends Controller
         // $message =Message::find(1);
         // return $message;
 
+        //Kev
+        // $notificaciones = Notification::all();
+        // return $notificaciones;
+
         //MIGUEL
         $publication=Publication::find(1);
         return $publication;
