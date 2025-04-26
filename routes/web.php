@@ -37,12 +37,11 @@ Route::controller(RoleController::class)->group(function ()  {
     Route::post('/roles','store')->name('roles.store');
 });
 
-// Mostrar el formulario de notificacion Kevin
-Route::get('/notificacion', [NotificationController::class, 'vista_notificacion'])->name('notificacion.formulario');
-
-// Guardar los datos del formulario Kevin
-Route::post('/notificacion', [NotificationController::class, 'respuesta_notificacion'])->name('notificacion.respuesta_notificacion');
-
+//Kevin
+Route::controller(NotificationController::class)->group(function () {
+    Route::get('/notificacion', 'vista_notificacion')->name('notificacion.formulario');
+    Route::post('/notificacion', 'respuesta_notificacion')->name('notificacion.respuesta_notificacion');
+});
 
 Route::get('/vite', function () {
     return view('index');
