@@ -6,6 +6,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\OrmController;
 use App\Models\Role;
 use App\Models\Publication;
+use App\Models\Notification;
 use App\Models\Message;
 use App\Models\User;
 
@@ -35,6 +36,13 @@ Route::controller(RoleController::class)->group(function ()  {
     Route::get('/roles/create','create')->name('roles.create');
     Route::post('/roles','store')->name('roles.store');
 });
+
+//Kevin
+Route::controller(NotificationController::class)->group(function () {
+    Route::get('/notificacion', 'vista_notificacion')->name('notificacion.formulario');
+    Route::post('/notificacion', 'respuesta_notificacion')->name('notificacion.respuesta_notificacion');
+});
+
 Route::get('/vite', function () {
     return view('index');
 });
