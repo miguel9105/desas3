@@ -1,0 +1,41 @@
+/* estilos para la seccion de encabezado */
+
+/* estilos para los titulos */
+h1, h2, h3, h4 {
+    font-family: 'Nunito', sans-serif;
+    color: #333;
+}
+
+/* estilos personalizados para las tarjetas de los integrantes */
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    padding: 1rem; /* agregar espacio interno si se desea */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-title {
+    font-weight: bold;
+    color: #222;
+    font-size: 1.1rem; /* reducido para mayor compacidad */
+}
+
+.card-text {
+    color: #555;
+    font-size: 0.9rem; /* reducido para mayor compacidad */
+}
+
+/* estilo responsivo para dispositivos pequenos */
+@media (max-width: 768px) {
+    .masthead {
+        padding: 60px 20px; /* reducido tambien en pantallas pequenas */
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+}

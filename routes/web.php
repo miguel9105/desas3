@@ -47,7 +47,10 @@ Route::get('/vite', function () {
     return view('index');
 });
 
-
+// Ruta para la vista 'conocenos'
+Route::get('/conocenos', function () {
+    return view('conocenos');
+});
 
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
