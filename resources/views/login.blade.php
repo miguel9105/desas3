@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.noRegister')
 
 @section('contend')
 <div class="container h-100 d-flex align-items-center min-vh-100">
